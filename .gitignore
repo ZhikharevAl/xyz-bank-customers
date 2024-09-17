@@ -1,0 +1,13 @@
+.idea
+/venv
+xyz-bank.iml
+
+# pytest
+.cache/
+*.py[cod]
+__pycache__/
+*.pytest_cache/
+
+# Allure
+allure-results/
+allure-report/
