@@ -2,6 +2,7 @@ import allure
 import pytest
 from pages.customer_list_page import CustomerListPage
 
+
 @allure.epic("Customer Management")
 @allure.feature("Customer List")
 @allure.description_html("""
@@ -17,7 +18,6 @@ from pages.customer_list_page import CustomerListPage
 </ul>
 """)
 class TestCustomerList:
-
     @allure.story("Sort customers by first name")
     @allure.severity(allure.severity_level.NORMAL)
     @pytest.mark.ui
@@ -27,12 +27,12 @@ class TestCustomerList:
             customer_list_page = CustomerListPage(browser)
             customer_list_page.open()
 
-        with (allure.step("Verify page is loaded")):
-            assert customer_list_page.is_page_loaded(), (
-                "Customer List page is not loaded"
-            )
+        with allure.step("Verify page is loaded"):
+            assert (
+                customer_list_page.is_page_loaded()
+            ), "Customer List page is not loaded"
 
-        with (allure.step(f"Sort customers by first name in {sort_direction} order")):
+        with allure.step(f"Sort customers by first name in {sort_direction} order"):
             initial_names = customer_list_page.get_customer_names()
 
             programmatically_sorted_names = (
@@ -48,12 +48,12 @@ class TestCustomerList:
 
             ui_sorted_names = customer_list_page.get_customer_names()
 
-            assert programmatically_sorted_names == ui_sorted_names, (
-                f"Customer list is not sorted correctly in {sort_direction} order"
-            )
+            assert (
+                programmatically_sorted_names == ui_sorted_names
+            ), f"Customer list is not sorted correctly in {sort_direction} order"
 
         allure.attach(
             browser.get_screenshot_as_png(),
             name=f"final_sorted_customer_list_{sort_direction}",
-            attachment_type=allure.attachment_type.PNG
+            attachment_type=allure.attachment_type.PNG,
         )

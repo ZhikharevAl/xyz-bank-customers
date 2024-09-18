@@ -4,6 +4,7 @@ import pytest
 from pages.add_customer_page import AddCustomerPage
 from data.generators import create_customers
 
+
 @allure.epic("Customer Management")
 @allure.feature("Add Customer")
 @allure.description_html("""
@@ -30,7 +31,6 @@ from data.generators import create_customers
 </ul>
 """)
 class TestAddCustomer:
-
     @allure.story("Add a new customer with valid data")
     @allure.severity(allure.severity_level.CRITICAL)
     @pytest.mark.smoke
@@ -47,13 +47,14 @@ class TestAddCustomer:
             assert customer_page.is_page_loaded(), "Add Customer page is not loaded"
 
         with allure.step("Fill customer information"):
-            customer_page.add_customer(customer.first_name, customer.last_name,
-                                       customer.post_code)
+            customer_page.add_customer(
+                customer.first_name, customer.last_name, customer.post_code
+            )
 
         allure.attach(
             browser.get_screenshot_as_png(),
             name="add_customer_result",
-            attachment_type=allure.attachment_type.PNG
+            attachment_type=allure.attachment_type.PNG,
         )
 
         with allure.step("Submit customer information"):
@@ -61,8 +62,9 @@ class TestAddCustomer:
 
         with allure.step("Verify success message"):
             alert_text = customer_page.get_alert_text()
-            assert "Customer added successfully" in alert_text, (f"Unexpected "
-                                                f"alert message: {alert_text}")
+            assert "Customer added successfully" in alert_text, (
+                f"Unexpected " f"alert message: {alert_text}"
+            )
 
         with allure.step("Accept alert"):
             customer_page.accept_alert()

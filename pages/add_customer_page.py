@@ -10,7 +10,7 @@ class AddCustomerPage(BasePage):
     """Page object for the Add Customer page in XYZ Bank application."""
 
     URL = "/manager/addCust"
-    EXPECTED_TITLE = 'XYZ Bank'
+    EXPECTED_TITLE = "XYZ Bank"
 
     # Locators
     FIRST_NAME_INPUT: Tuple[str, str] = (By.XPATH, '//input[@ng-model="fName"]')
@@ -24,7 +24,10 @@ class AddCustomerPage(BasePage):
         Args:
             browser: WebDriver instance
         """
-        super().__init__(browser, base_url="https://www.globalsqa.com/angularJs-protractor/BankingProject/#")
+        super().__init__(
+            browser,
+            base_url="https://www.globalsqa.com/angularJs-protractor/BankingProject/#",
+        )
 
     def open(self) -> None:
         """Open the Add Customer page."""
