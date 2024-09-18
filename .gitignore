@@ -7,6 +7,7 @@ xyz-bank.iml
 *.py[cod]
 __pycache__/
 *.pytest_cache/
+pytest.log
 
 # Allure
 allure-results/
