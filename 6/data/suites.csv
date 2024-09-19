@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Sep 19 01:00:53 GMT 2024","Thu Sep 19 01:00:56 GMT 2024","3076","tests.ui","test_add_customer","TestAddCustomer","","","test_add_customer",""
+"passed","Thu Sep 19 01:00:53 GMT 2024","Thu Sep 19 01:00:56 GMT 2024","2600","tests.ui","test_customer_list","TestCustomerList","","","test_sort_customers_by_first_name[ascending]",""
+"passed","Thu Sep 19 01:00:53 GMT 2024","Thu Sep 19 01:00:56 GMT 2024","2623","tests.ui","test_delete_customer","TestDeleteCustomer","","","test_delete_customer_with_average_name_length",""
+"passed","Thu Sep 19 01:00:53 GMT 2024","Thu Sep 19 01:00:56 GMT 2024","2496","tests.ui","test_customer_list","TestCustomerList","","","test_sort_customers_by_first_name[descending]",""
