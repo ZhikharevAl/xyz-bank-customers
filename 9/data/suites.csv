@@ -1,0 +1,55 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Sep 27 12:50:58 GMT 2024","Fri Sep 27 12:50:59 GMT 2024","1329","tests.ui","test_delete_customer","TestDeleteCustomer","","","test_delete_customer_with_average_name_length","
+        Test deleting a customer with an average name length.
+
+        This test verifies the functionality of deleting a customer
+        whose name is of average length from the customer list.
+
+        Args:
+            browser (WebDriver): The Selenium WebDriver instance.
+
+        Returns:
+            None
+        "
+"passed","Fri Sep 27 12:50:58 GMT 2024","Fri Sep 27 12:50:59 GMT 2024","1193","tests.ui","test_customer_list","TestCustomerList","","","test_sort_customers_by_first_name[ascending]","
+        Test sorting customers by first name in the specified order.
+
+        This test verifies that customers can be sorted by their first names
+        in either descending or ascending order and compares the programmatically
+        sorted names with the UI-sorted names.
+
+        Args:
+            browser (WebDriver): The Selenium WebDriver instance.
+            sort_direction (str): The direction to sort the names
+            ('descending' or 'ascending').
+
+        Returns:
+            None
+        "
+"passed","Fri Sep 27 12:50:58 GMT 2024","Fri Sep 27 12:50:59 GMT 2024","1210","tests.ui","test_customer_list","TestCustomerList","","","test_sort_customers_by_first_name[descending]","
+        Test sorting customers by first name in the specified order.
+
+        This test verifies that customers can be sorted by their first names
+        in either descending or ascending order and compares the programmatically
+        sorted names with the UI-sorted names.
+
+        Args:
+            browser (WebDriver): The Selenium WebDriver instance.
+            sort_direction (str): The direction to sort the names
+            ('descending' or 'ascending').
+
+        Returns:
+            None
+        "
+"passed","Fri Sep 27 12:50:58 GMT 2024","Fri Sep 27 12:50:59 GMT 2024","1392","tests.ui","test_add_customer","TestAddCustomer","","","test_add_customer","
+        Add a new customer with valid data.
+
+        This test verifies the functionality of adding a new customer
+        with valid data to the customer management system.
+
+        Args:
+            browser (WebDriver): The Selenium WebDriver instance.
+
+        Returns:
+            None
+        "
